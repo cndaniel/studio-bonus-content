@@ -1,0 +1,162 @@
+@import "colors";
+
+form {
+  margin: 0 0 10px 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 10px 0px;
+  border: 0;
+
+  ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      &.required label {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  div.field_with_errors {
+    display: inline;
+    label {
+      color: $errors-text-color;
+    }
+    input, textarea, select {
+      background: $errors-background-color;
+    }
+  }
+}
+
+label {
+  font-size: 1em;
+  display: block;
+  margin-bottom: .35em;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  display: block;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #FFF;
+  border: 2px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid $button-primary-color;
+  outline: 0;
+  transition: border-color 0.3s ease-in;
+}
+
+input[type="checkbox"] {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  float: left;
+}
+
+/* BUTTONS */
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 20px;
+  color: $primary-text-color;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  background-color: $button-color;
+  border: 1px solid $button-hover-color;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover,
+.button:focus,
+button:focus,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: $primary-text-color;
+  background-color: $button-hover-color;
+  border-color: $button-hover-color;
+}
+
+a.button {
+  color: $primary-text-color;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: $button-primary-color;
+  border-color: $button-primary-color;
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:hover,
+button.button-primary:focus,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: $button-primary-hover-color;
+  border-color: $button-primary-hover-color;
+}
+

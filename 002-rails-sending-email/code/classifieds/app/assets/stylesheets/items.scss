@@ -1,0 +1,77 @@
+@import "colors";
+
+ol#items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 25px 0;
+    border-bottom: 1px solid $subtle-color;
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    position: relative;
+
+    a.button {
+      width: 110px;
+      margin-left: 50px;
+      padding: 0;
+      background: transparent;
+      color: $secondary-text-color;
+      border: 1px solid $button-hover-color;
+    }
+
+    .name {
+      position: relative;
+      left: 20px;
+    }
+
+    .price {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+article#item {
+  p {
+    padding: .5em 0;
+    font-size: 1.15em;
+    line-height: 1.25em;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: .5em;
+    font-size: 120%;
+    color: $secondary-text-color;
+  }
+
+  .list-date {
+    font-size: 100%;
+    font-weight: bold;
+    color: $secondary-text-color;
+
+    a {
+      color: $secondary-text-color;
+    }
+  }
+
+  footer {
+    margin: 2em 0;
+
+    nav {
+      text-align: center;
+      margin-top: 2em;
+    }
+  }
+}

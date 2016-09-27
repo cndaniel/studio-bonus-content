@@ -1,0 +1,146 @@
+@import "colors";
+
+body {
+  color: $primary-text-color;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+}
+
+div#container {
+  background: $primary-background-color;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+header#page-header {
+  background-color: $secondary-background-color;
+  height: 50px;
+
+  div#page-header-inner {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+    h1 {
+      position: absolute;
+      top: 10px;
+      left: 50px;
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 a {
+      color: $accent-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-text-color;
+        transition: color 0.2s ease-in;
+      }
+    }
+
+    nav {
+      position: absolute;
+      top: 15px;
+      right: 50px;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          float: left;
+          padding-left: 15px;
+        }
+      }
+      a {
+        color: $secondary-text-color;
+        text-decoration: none;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+footer#page-footer {
+  border-top: 1px solid $subtle-color;
+  color: $secondary-text-color;
+
+  div#page-footer-inner {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    p {
+      font-size: .8em;
+      text-align: center;
+    }
+
+    a {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+/* FLASHES */
+
+.flash {
+  color: $primary-text-color;
+  border-radius: 4px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &.notice {
+    background-color: $flash-notice-color;
+  }
+
+  &.alert {
+    background-color: $flash-alert-color;
+  }
+}
+
+/* ERRORS */
+
+section#errors {
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+
+  background: $errors-background-color;
+
+  h2 {
+    color: $errors-text-color;
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin: .5em 0;
+    font-weight: bold;
+  }
+}
+
+/* CLEARING */
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}

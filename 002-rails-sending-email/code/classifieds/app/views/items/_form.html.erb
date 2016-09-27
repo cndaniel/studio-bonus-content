@@ -1,0 +1,27 @@
+<%= form_for(@item) do |f| %>
+  <%= render "shared/errors", object: @item %>
+  <fieldset>
+    <ol>
+      <li class="required">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, size: 50 %>
+      </li>
+      <li class="required">
+        <%= f.label :description %>
+        <%= f.text_area :description, cols: 70, rows: 5 %>
+      </li>
+      <li class="required">
+        <%= f.label :price %>
+        <%= f.text_field :price, size: 10 %>
+      </li>
+      <li class="required">
+        <%= f.label :condition %>
+        <%= f.select :condition, Item::CONDITIONS, prompt: "Pick one" %>
+      </li>
+      <li>
+        <%= f.submit class: "button-primary" %>
+        <%= link_to "Cancel", items_path, class: 'button' %>
+      </li>
+    </ol>
+  </fieldset>
+<% end %>

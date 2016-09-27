@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  text: 
+  price: 9.99
+  sold_on: 2015-02-24
+
+two:
+  name: MyString
+  text: 
+  price: 9.99
+  sold_on: 2015-02-24

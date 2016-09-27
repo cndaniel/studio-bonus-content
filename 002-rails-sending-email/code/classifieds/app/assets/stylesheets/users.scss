@@ -1,0 +1,47 @@
+@import "colors";
+
+ol#users {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 15px 0;
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    position: relative;
+
+    .name {
+      position: relative;
+      left: 20px;
+    }
+  }
+}
+
+article#user {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: .5em;
+    font-size: 120%;
+    color: $secondary-text-color;
+  }
+
+  p {
+    padding: .5em 0;
+    font-size: 1.15em;
+    line-height: 1.25em;
+  }
+
+  footer {
+    margin: 2em 0;
+
+    nav {
+      text-align: center;
+      margin-top: 2em;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<% content_for(:title, @item.name) %>
+
+<article id="item">
+  <header>
+    <h1><%= @item.name %></h1>
+    <h2><%= @item.condition %> &bull; <%= number_to_currency(@item.price) %>
+  </header>
+
+  <p>
+    <%= @item.description %>
+  </p>
+
+  <p class="list-date">
+    Listed on <%= @item.created_at %> by
+    <%= link_to @item.user.name, @item.user %>
+  </p>
+
+  <p>
+    <%= link_to "Comments", "#", id: "comments-link" %>
+  </p>
+
+  <section id="comments-section">
+    <ol id="comments">
+      <%= render @comments %>
+    </ol>
+    <%= form_for [@item, @item.comments.new], remote: true do |f| %>
+      <fieldset>
+        <ol>
+          <li>
+            <%= f.text_area :body, rows: 2, cols: 60,
+                            placeholder: "Write a comment..." %>
+          </li>
+          <li>
+            <%= f.submit 'Post Comment', class: 'button' %>
+          </li>
+        </ol>
+      </fieldset>
+    <% end %>
+  </section>
+
+  <% if current_user?(@item.user) %>
+    <footer>
+      <nav>
+        <%= link_to 'Edit', edit_item_path(@item), class: 'button' %>
+        <%= link_to 'Delete', @item,
+                    class: 'button',
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+      </nav>
+    </footer>
+  <% end %>
+</article>

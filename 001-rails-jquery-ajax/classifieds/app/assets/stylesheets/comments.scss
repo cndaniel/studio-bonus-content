@@ -1,0 +1,26 @@
+@import "colors";
+
+#comments-section {
+  display: none;
+}
+
+ol#comments {
+  font-size: 1.15em;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 1em 0;
+
+    .date {
+      font-size: .8em;
+      font-weight: bold;
+      color: $secondary-text-color;
+    }
+
+    p {
+      margin: 0;
+      font-size: .95em;
+    }
+  }
+}

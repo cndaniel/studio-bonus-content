@@ -1,0 +1,15 @@
+$primary-background-color: #FFF;
+$secondary-background-color: #2f2d33;
+$primary-text-color: #5e6163;
+$secondary-text-color: lighten($primary-text-color, 30%);
+$link-color: #296094;
+$accent-color: #FFF;
+$subtle-color: #e5e5e5;
+$button-color: #D9D9D9;
+$button-hover-color: darken($button-color, 10%);
+$button-primary-color: #33C3F0;
+$button-primary-hover-color: darken($button-primary-color, 10%);
+$errors-background-color: #FFC;
+$errors-text-color: #DC3D3D;
+$flash-notice-color: #DBFFDD;
+$flash-alert-color:  #FFE1DE;

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= page_title %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render "layouts/header" %>
+
+<div id="container">
+  <%= render "layouts/flashes" %>
+  <section id="content">
+    <%= yield %>
+  </section>
+</div>
+
+<%= render "layouts/footer" %>
+
+</body>
+</html>
