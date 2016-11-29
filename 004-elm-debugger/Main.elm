@@ -36,10 +36,7 @@ update msg model =
         AddWish id ->
             let
                 maybeProduct =
-                    if List.member id [4, 3, 7, 11, 12, 21, 22, 23, 24, 25] then
-                        Nothing
-                    else
-                        List.head (List.filter (\p -> p.id == id) model.products)
+                    List.head (List.filter (\p -> p.id == id) model.products)
             in
                 case maybeProduct of
                     Just product ->
@@ -111,7 +108,7 @@ viewWish product =
 
 viewProductList products =
     div [ id "products" ]
-        [ h2 [] [ text "🎁 Being Sold Right Now..." ]
+        [ h2 [] [ text "🎁 Items Selling Right Now..." ]
         , ul [] (List.map viewProduct products)
         ]
 
@@ -126,7 +123,7 @@ viewWishList products =
 view : Model -> Html Msg
 view model =
     div [ class "content" ]
-        [ viewProductList (List.take 7 model.products)
+        [ viewProductList (List.take 9 model.products)
         , viewWishList (model.wishes)
         ]
 
