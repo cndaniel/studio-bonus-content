@@ -1,3 +1,3 @@
-# Studio Tutorials
+# Studio Bonus Content
 
-Code for our free video tutorials focused on smaller topics.
+Code for our free videos focused on smaller topics.
